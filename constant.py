@@ -1,0 +1,2 @@
+CROSS_SYMBOL = 'x'
+NAUGHT_SYMBOL = 'o'

@@ -7,6 +7,8 @@ name = "pypi"
 pytest = "*"
 flake8 = "*"
 black = "*"
+prettier-printer = "*"
+pydash = "*"
 
 [dev-packages]
 black = "*"
@@ -18,4 +20,5 @@ python_version = "3.9"
 allow_prereleases = true
 
 [scripts]
-tests = "pytest"
+test = "pytest"
+start = "python main.py"
