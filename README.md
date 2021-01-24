@@ -1,4 +1,4 @@
-![Python application](https://github.com/actions/hello-world/workflows/build%20status/badge.svg)
+![Build status](https://github.com/mishaal79/tictactoe/workflows/Python%20application/badge.svg)
 # TicTacToe Implementation
 
 This implementation is for 2 human players to play.
