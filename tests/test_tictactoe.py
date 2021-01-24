@@ -1,19 +1,20 @@
 import pytest
 from tictactoe import TicTacToe
-from constant import GRID_SIZE,  CROSS_SYMBOL, NAUGHT_SYMBOL
+from constant import GRID_SIZE, CROSS_SYMBOL, NAUGHT_SYMBOL
 from player import Player
 
 
 @pytest.fixture()
 def game():
-    return TicTacToe(GRID_SIZE, Player('tom', CROSS_SYMBOL), Player('mark', NAUGHT_SYMBOL))
+    return TicTacToe(
+        GRID_SIZE, Player("tom", CROSS_SYMBOL), Player("mark", NAUGHT_SYMBOL)
+    )
 
 
 def test_place_marker_valid(game):
     game.place_marker(CROSS_SYMBOL, 1, 1)
     assert game.grid[1][1] == CROSS_SYMBOL
-    assert(game.move_count == 1)
-
+    assert game.move_count == 1
 
 
 def test_place_marker_invalid(game):

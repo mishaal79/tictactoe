@@ -28,7 +28,6 @@ class TicTacToe:
         else:
             return False
 
-
     def get_cell_value(self, row, column):
         return self.grid[row][column]
 

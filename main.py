@@ -9,9 +9,7 @@ def main():
     player1 = Player(input("Enter name for player1: "), CROSS_SYMBOL)
     player2 = Player(input("Enter name for player2: "), NAUGHT_SYMBOL)
     game = TicTacToe(GRID_SIZE, player1, player2)
-    running = True
     game.print_grid()
-    # while running:
     while (
         game.state == TicTacToe.STATES.CROSS_TURN
         or game.state == TicTacToe.STATES.NAUGHT_TURN

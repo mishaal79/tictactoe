@@ -2,12 +2,11 @@ import pydash
 from constant import GRID_SIZE
 
 
-
 class Player:
     def __init__(self, name, symbol):
         self.name = name
         self.symbol = symbol
-        self.row =  [0] * GRID_SIZE
+        self.row = [0] * GRID_SIZE
         self.column = [0] * GRID_SIZE
         self.left_diag = 0
         self.right_diag = 0
@@ -21,7 +20,7 @@ class Player:
         self.column[self.marker_column] += 1
         if self.marker_row == self.marker_column:
             self.left_diag += 1
-        if self.marker_row + self.marker_column == GRID_SIZE-1:
+        if self.marker_row + self.marker_column == GRID_SIZE - 1:
             self.right_diag += 1
 
     def is_winner(self):
