@@ -1,2 +1,3 @@
 CROSS_SYMBOL = 'x'
 NAUGHT_SYMBOL = 'o'
+GRID_SIZE = 3
