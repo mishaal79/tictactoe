@@ -12,11 +12,12 @@ def game():
 def test_place_marker_valid(game):
     game.place_marker(CROSS_SYMBOL, 1, 1)
     assert game.grid[1][1] == CROSS_SYMBOL
+    assert(game.move_count == 1)
+
 
 
 def test_place_marker_invalid(game):
     game.place_marker(CROSS_SYMBOL, 1, 1)
-    assert(game.move_count == 1)
     assert game.place_marker(NAUGHT_SYMBOL, 1, 1) == False
 
 

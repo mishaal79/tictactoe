@@ -10,8 +10,8 @@ def main():
     player2 = Player(input("Enter name for player2: "), NAUGHT_SYMBOL)
     game = TicTacToe(GRID_SIZE, player1, player2)
     running = True
+    game.print_grid()
     while running:
-        game.print_grid()
         if game.state == TicTacToe.STATES.CROSS_TURN:
             print("Player1 turn")
             while True:
@@ -54,8 +54,7 @@ def main():
             print("{} wins the game".format(game.player2.name))
 
         if (
-            game.state == TicTacToe.STATES.CROSS_TURN
-            and game.move_count == GRID_SIZE ^ 2
+             game.move_count == GRID_SIZE ^ 2
         ):
             running = False
             print("The game is drawn")

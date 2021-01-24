@@ -9,8 +9,8 @@ class Player:
         self.symbol = symbol
         self.row =  [0] * GRID_SIZE
         self.column = [0] * GRID_SIZE
-        self.left_diag = [0] * GRID_SIZE
-        self.right_diag = [0] * GRID_SIZE
+        self.left_diag = 0
+        self.right_diag = 0
 
     def set_marker(self, marker):
         marker = pydash.map_(marker, int)
@@ -20,16 +20,16 @@ class Player:
         self.row[self.marker_row] += 1
         self.column[self.marker_column] += 1
         if self.marker_row == self.marker_column:
-            self.left_diag[self.marker_row] += 1
-        if self.marker_row + self.marker_column == GRID_SIZE:
-            self.right_diag[self.marker_row] += 1
+            self.left_diag += 1
+        if self.marker_row + self.marker_column == GRID_SIZE-1:
+            self.right_diag += 1
 
     def is_winner(self):
         if (
             self.row[self.marker_row] == GRID_SIZE
             or self.column[self.marker_column] == GRID_SIZE
-            or self.left_diag[self.marker_row] == GRID_SIZE
-            or self.right_diag[self.marker_row] == GRID_SIZE
+            or self.left_diag == GRID_SIZE
+            or self.right_diag == GRID_SIZE
         ):
             return True
         else:
